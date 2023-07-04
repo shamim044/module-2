@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: green;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header-logo{
+    float: left;
+}
+.header .header-logo a{
+    color:#fff;
+    text-decoration: none;
+}
+.header .header-right{
+    float: right;
+}
+.header .header-right li{
+    float: left;
+    list-style: none;
+    margin-left: 15px;
+}
+.header .header-right li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 12px;
+}
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px 30px;
+    position: relative;
+}
+.banner::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .7;
+}
+.banner .banner-text{
+    padding: 300px 0px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.banner .banner-text h1{
+    font-size: 45px;
+}
+.banner .banner-text p{
+    font-size: 18px;
+    margin: 25px 0;
+    line-height: 30px;
+}
+.banner .banner-text a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 25px;
+    background-color: green;
+    border-radius: 30px;
+    display: inline-block;
+    transition: .3s;
+    border: 2px solid #fff;
+    position: relative;
+    padding-right: 40px;
+}
+.banner .banner-text a::after{
+    position: absolute;
+    content: '\f061';
+    font-family: "Font Awesome 5 Free";
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+.banner .banner-text a:hover{
+    color: green;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px #000;
+    border: 2px solid green;
+}
+.banner .banner-text a:hover::after{
+    right: 10px;
+}
