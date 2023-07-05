@@ -90,7 +90,17 @@ body{
     top: 50%;
     transform: translateY(-50%);
     transition: .3s;
+    /* -webkit-animation: bounce 2s linear 0s infinite alternate;
+    animation: bounce 2s linear 0s infinite alternate; */
 }
+/* @-webkit-keyframes bounce {
+    50% {
+    -webkit-transform(translateY(-30px));
+    }
+    100% {
+    -webkit-transform(translateY(0px));
+    }
+    } */
 .common-btn:hover{
     color: green;
     background-color: #fff;
@@ -108,9 +118,12 @@ body{
     padding: 0 30px;
     margin: 120px 0px;
 }
-.about .hadding{
+.hadding{
     text-align: center;
-    margin-bottom: 60px;
+    margin: 80px 0 60px;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 .about .single-about{
     width: 25%;
@@ -221,3 +234,53 @@ body{
     margin: 15px 0;
 }
 /*-- about-section-end --*/
+
+/*-- service-section-start --*/
+.service-section{
+    padding:0px 120px 120px;
+}
+.service-section .hadding{
+    margin: 120px;
+}
+.services{
+    display: flex;
+    justify-content: center;
+}
+.services .single-service{
+    width: 350px;
+    color: #fff;
+    height: 350px;
+    border-radius: 15px;
+    background-color: beige;
+    text-align: center;
+    padding: 34px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    margin: 0 77px;
+}
+.services .single-service::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background-color:green;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+.services .single-service .service-icon i{
+    font-size: 40px;
+}
+.services .single-service h4{
+    font-size: 26px;
+    margin: 20px 0;
+}
+.services .single-service p{
+    font-size: 22px;
+}
+/*-- service-section-end --*/
+
+
